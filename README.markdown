@@ -1,0 +1,1 @@
+== Welcome to LGQQuote3 - A Rails Application
