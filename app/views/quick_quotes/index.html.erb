@@ -1,0 +1,35 @@
+<h1>Quick Quotes</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Createdby</th>
+    <th>Hours</th>
+    <th>Cost</th>
+    <th>Client</th>
+    <th>Status</th>
+    <th>Requirements</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @quick_quotes.each do |quick_quote| %>
+  <tr>
+    <td><%= quick_quote.Title %></td>
+    <td><%= quick_quote.CreatedBy %></td>
+    <td><%= quick_quote.Hours %></td>
+    <td><%= quick_quote.Cost %></td>
+    <td><%= quick_quote.Client %></td>
+    <td><%= quick_quote.Status %></td>
+    <td><%= quick_quote.Requirements %></td>
+    <td><%= link_to 'Show', quick_quote %></td>
+    <td><%= link_to 'Edit', edit_quick_quote_path(quick_quote) %></td>
+    <td><%= link_to 'Destroy', quick_quote, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Quick quote', new_quick_quote_path %>

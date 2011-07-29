@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @quick_quote.Title %>
+</p>
+
+<p>
+  <b>Createdby:</b>
+  <%= @quick_quote.CreatedBy %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%= @quick_quote.Hours %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%= @quick_quote.Cost %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%= @quick_quote.Client %>
+</p>
+
+<p>
+  <b>Requirements:</b>
+  <%= @quick_quote.Requirements %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @quick_quote.Status %>
+</p>
+
+
+<%= link_to 'Edit', edit_quick_quote_path(@quick_quote) %> |
+<%= link_to 'Back', quick_quotes_path %>

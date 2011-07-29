@@ -1,0 +1,45 @@
+<%= form_for(@quick_quote) do |f| %>
+  <% if @quick_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@quick_quote.errors.count, "error") %> prohibited this quick_quote from being saved:</h2>
+
+      <ul>
+      <% @quick_quote.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Title %><br />
+    <%= f.text_field :Title %>
+  </div>
+  <div class="field">
+    <%= f.label :CreatedBy %><br />
+    <%= f.text_field :CreatedBy %>
+  </div>
+  <div class="field">
+    <%= f.label :Hours %><br />
+    <%= f.text_field :Hours %>
+  </div>
+  <div class="field">
+    <%= f.label :Cost %><br />
+    <%= f.text_field :Cost %>
+  </div>
+  <div class="field">
+    <%= f.label :Client %><br />
+    <%= f.text_field :Client %>
+  </div>
+  <div class="field">
+    <%= f.label :Requirements %><br />
+    <%= f.text_area :Requirements %>
+  </div>
+  <div class="field">
+    <%= f.label :Status %><br />
+    <%= f.text_field :Status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
