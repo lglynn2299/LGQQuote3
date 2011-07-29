@@ -1,9 +1,9 @@
 class Client < ActiveRecord::Base
 
-has_many :quick_quotes
+has_many :quick_quote
 
-validates :clientname, :presence => true
+validates :ClientName, :presence => true
 
-validates :clientname, :uniqueness => {:case_sensitive => false}
+validates :ClientName, :uniqueness => true
 
 end

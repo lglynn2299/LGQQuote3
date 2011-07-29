@@ -4,12 +4,12 @@ class QuickQuote < ActiveRecord::Base
 
  STATUS = %w(Pending Approved Completed)
  
-   validates :title, :presence => true 
-   validates :requirements, :presence => true
-   validates :user_id, :presence => true
-   validates :client_id, :presence => true
-   #validates_format_of :hours, /[1-9][\d]{0,2}/
-   #validates_format_of :cost, /[1-9][\d]{0,2}/
-   validates :title, :length => { :maximum => 50 }
-   validates :status, :inclusion => {:in => STATUS} 
+   validates :Title, :presence => true, 
+             :length => { :maximum => 50 }
+   validates :Requirements, :presence => true
+   #validates :User_id, :presence => true
+   #validates :Client_id, :presence => true
+   #validates_format_of :Hours, /[1-9][\d]{0,2}/
+   #validates_format_of :Cost, /[1-9][\d]{0,2}/
+   validates :Status, :inclusion => {:in => STATUS} 
 end
