@@ -10,6 +10,8 @@ LGQQuotes3::Application.routes.draw do
   resources :users
 
   resources :quick_quotes
+
+root :to => "pages#home"
 end
 
   
