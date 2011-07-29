@@ -11,7 +11,7 @@ LGQQuotes3::Application.routes.draw do
 
   resources :quick_quotes
 
-root :to => "quick_quote#index"
+root :to => "quick_quotes#index"
 end
 
   
