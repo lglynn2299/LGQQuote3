@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :CreatedBy %><br />
-    <%= f.text_field :CreatedBy %>
+    <%= f.collection_select :user_id, user.all, :id, :lastname, :include_blank => "select ..." %>
   </div>
   <div class="field">
     <%= f.label :Hours %><br />
@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :Client %><br />
-    <%= f.text_field :Client %>
+    <%= f.collection_select :client_id, Client.all, :id, :clientname, :include_blank => "select ..." %>
   </div>
   <div class="field">
     <%= f.label :Requirements %><br />
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :Status %><br />
-    <%= f.text_field :Status %>
+    <%= f.select :status, quick_quote::STATUS, :include_blank => " select a status ..." %>
   </div>
   <div class="actions">
     <%= f.submit %>
